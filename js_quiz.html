@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>Fizzbuzz </title>
+    <style type="text/css">
+        body {
+            margin: 30px;
+        }
+        .result {
+            padding: 10px;
+            color: green;
+            text-align: center;
+        }
+        .button {
+            margin: 20px;
+        }
+    </style> 
+</head>
+<body>
+    <header class="header">
+            <h1>Fizzbuzz</h1>
+    </header>
+
+    <form class="input">
+        <input type="button" class ="button" onClick="fizzBuzz()" Value="Buzz!" />
+    </form>
+    <div class ="result">
+        The Result is : <br>
+        <span id = "result"></span>
+    </div>  
+<script>
+    const fizzBuzz = function() {
+        let i = 1;
+        let fbArray = [];
+        while (i <= 100){
+            if (i % 5 === 0 && i % 3 === 0) {
+                fbArray.push("FizzBuzz")
+            } else if (i % 5 === 0) {
+                fbArray.push("Buzz")
+            } else if (i % 3 === 0) {
+                fbArray.push("Fizz")
+            } else {
+                fbArray.push(i)
+            } 
+            i += 1;
+        };
+    document.getElementById("result").innerHTML = fbArray;
+    }
+       
+</script>  
+</body>
+</html>
